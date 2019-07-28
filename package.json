@@ -1,0 +1,15 @@
+{
+  "name": "px-to-viweport",
+  "version": "1.0.0",
+  "description": "parse px to viewport",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js"
+  },
+  "dependencies": {
+    "@types/node": "^12.6.8",
+    "postcss-px-to-viewport": "^1.1.1"
+  },
+  "author": "",
+  "license": "MIT"
+}
