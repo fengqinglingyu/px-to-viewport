@@ -1,7 +1,8 @@
 const fs = require('fs');
 const postcss = require('postcss');
 const pxtorem = require('postcss-px-to-viewport');
-const css = fs.readFileSync('main.css', 'utf8');
+const file = 'main.css';
+const css = fs.readFileSync(file, 'utf8');
 const options = {
   unitToConvert: 'px',
   viewportWidth: 375,
@@ -22,5 +23,5 @@ const processedCss = postcss(pxtorem(options)).process(css).css;
 
 console.log(processedCss);
 
-const ws = fs.createWriteStream('./build/compiled.css');
+const ws = fs.createWriteStream('./build/' + file);
 ws.write(processedCss);
