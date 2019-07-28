@@ -1,6 +1,6 @@
 const fs = require('fs');
 const postcss = require('postcss');
-const pxtorem = require('postcss-px-to-viewport');
+const pxtoviewport = require('postcss-px-to-viewport');
 const file = 'main.css';
 const css = fs.readFileSync(file, 'utf8');
 const options = {
@@ -19,7 +19,7 @@ const options = {
   landscapeUnit: 'vw',
   landscapeWidth: 568
 };
-const processedCss = postcss(pxtorem(options)).process(css).css;
+const processedCss = postcss(pxtoviewport(options)).process(css).css;
 
 console.log(processedCss);
 
